@@ -4,15 +4,15 @@ package de.martenl.interview.util.datastructures
  * Created by Marten on 19.10.2014.
  */
 
-object LinkedList {
+object MutableLinkedList {
 
-  def apply(data :Int*): LinkedList ={
-    new LinkedList(data)
+  def apply(data :Int*): MutableLinkedList ={
+    new MutableLinkedList(data)
   }
 }
 
 
-class LinkedList(data :Seq[Int])  {
+class MutableLinkedList(data :Seq[Int])  {
 
   var root : Option[Node] = None
 
@@ -137,7 +137,7 @@ class LinkedList(data :Seq[Int])  {
     }
   }
 
-  def reverse():LinkedList = {
+  def reverse():MutableLinkedList = {
     root match {
       case Some(rootElem) => {
         root = rootElem.reverse(None)
@@ -149,13 +149,13 @@ class LinkedList(data :Seq[Int])  {
     }
   }
 
-  def merge(otherList:LinkedList): LinkedList = {
-    val result = LinkedList()
+  def merge(otherList:MutableLinkedList): MutableLinkedList = {
+    val result = MutableLinkedList()
 
     result
   }
 
-  def concat(otherList:LinkedList): LinkedList = {
+  def concat(otherList:MutableLinkedList): MutableLinkedList = {
     otherList.root.getOrElse()
 
     this

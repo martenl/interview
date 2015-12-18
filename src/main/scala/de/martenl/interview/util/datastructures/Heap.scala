@@ -54,6 +54,8 @@ object Heap{
   private def right(i:Int):Int = {
     i*2 + 2
   }
+
+
 }
 
 

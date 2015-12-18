@@ -7,10 +7,10 @@ package de.martenl.interview.util.datastructures
 object Stack{
 
   def apply():Stack = {
-    new Stack(LinkedList())
+    new Stack(MutableLinkedList())
   }
 }
-class Stack(data:LinkedList) {
+class Stack(data:MutableLinkedList) {
 
 
   def push(x:Int):Stack = {

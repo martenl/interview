@@ -7,14 +7,14 @@ package de.martenl.interview.util.datastructures
 object Queue{
   
   def apply():Queue = {
-    new Queue(true,LinkedList())
+    new Queue(true,MutableLinkedList())
   }
   
   def lifoQueue():Queue = {
-    new Queue(false,LinkedList())
+    new Queue(false,MutableLinkedList())
   }
 }
-class Queue(val fifo:Boolean,data:LinkedList) {
+class Queue(val fifo:Boolean,data:MutableLinkedList) {
 
   def queue(x:Int):Queue = {
     if(fifo){
