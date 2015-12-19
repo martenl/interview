@@ -1,9 +1,5 @@
 package de.martenl.interview.util.datastructures
 
-/**
- * Created by Marten on 19.10.2014.
- */
-
 object MutableLinkedList {
 
   def apply(data :Int*): MutableLinkedList ={
@@ -63,10 +59,10 @@ class MutableLinkedList(data :Seq[Int])  {
     root match {
       case Some(rootElem) => {
         if(index == 0) {
-          val _root = root.get
+          val oldRoot = root.get
           root = Some(new Node(value))
-          root.get.next = _root.next
-          _root.data
+          root.get.next = oldRoot.next
+          oldRoot.data
         }else{
           rootElem.set(index,0,value)
         }
@@ -113,9 +109,9 @@ class MutableLinkedList(data :Seq[Int])  {
   }
 
   def push(value:Int): Unit ={
-    val _root = root
+    val oldRoot = root
     root = Some(new Node(value))
-    root.get.next = _root
+    root.get.next = oldRoot
   }
 
   def remove(index: Int): Int = {
