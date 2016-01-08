@@ -13,6 +13,10 @@ object Queue{
   def lifoQueue():Queue = {
     new Queue(false,MutableLinkedList())
   }
+
+  def fifoQueue():Queue = {
+    apply()
+  }
 }
 class Queue(val fifo:Boolean,data:MutableLinkedList) {
 
